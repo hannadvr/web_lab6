@@ -1,0 +1,158 @@
+.container {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .task-badge {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  .card-title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    color: #0f172a;
+  }
+  
+  .task-desc {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .input-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .input-item label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+  }
+  
+  .input-item input {
+    width: 130px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+  }
+  
+  .input-item input:focus {
+    border-color: #2563eb;
+  }
+  
+  .btn {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+  }
+  
+  .btn:hover {
+    background: #1d4ed8;
+  }
+  
+  .error-msg {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+    font-weight: 600;
+  }
+  
+  .table-box {
+    margin-top: 10px;
+  }
+  
+  .table-box h3 {
+    font-size: 1rem;
+    color: #1e293b;
+    margin-bottom: 12px;
+  }
+  
+  .table-scroll {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .matrix-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .matrix-table td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 14px;
+    text-align: center;
+    font-size: 1rem;
+    min-width: 32px;
+    color: #1e293b;
+  }
+  
+  .matrix-table td.odd-cell {
+    background: #dcfce7;
+    color: #15803d;
+    font-weight: 700;
+    border-color: #86efac;
+  }
+  
+  .results-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 10px;
+  }
+  
+  .results-box h3 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    color: #166534;
+  }
+  
+  .sum-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #15803d;
+    margin: 0;
+  }

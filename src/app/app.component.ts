@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
-import { AnimalComponent } from './animal/animal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, AnimalComponent],
-  templateUrl: './app.component.html'
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, HeaderComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'lab_angular_classes';
+  title = 'lab_angular_arrays';
 }

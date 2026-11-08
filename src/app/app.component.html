@@ -1,2 +1,27 @@
 <app-header></app-header>
-<app-animal></app-animal>
+
+<nav class="profile-menu">
+  <a
+    routerLink="/classes"
+    routerLinkActive="active"
+    class="profile-menu-link"
+  >
+    Класи
+  </a>
+  <a
+    routerLink="/array-one"
+    routerLinkActive="active"
+    class="profile-menu-link"
+  >
+    Одновимірний масив
+  </a>
+  <a
+    routerLink="/array-two"
+    routerLinkActive="active"
+    class="profile-menu-link"
+  >
+    Двовимірний масив
+  </a>
+</nav>
+
+<router-outlet></router-outlet>

@@ -4,7 +4,7 @@ export class Cat extends Animal {
   breed: string; // порода тварини
 
   constructor(name: string, h: number, breed: string) {
-    // k = 15 згідно з варіантом 4
+    // k = 15
     super(name, h, 15);
     this.breed = breed ? breed : 'Звичайна';
   }

@@ -1,0 +1,38 @@
+<main class="container">
+  <section class="card">
+    <div class="task-badge">Варіант 4</div>
+    <h2 class="card-title">Одновимірні масиви</h2>
+    <p class="task-desc">
+      Створіть масив з п'яти прізвищ і виведіть їх на екран ті з них, які починаються з певної букви, яка вводиться з клавіатури.
+    </p>
+
+    <div class="full-list-box">
+      <strong>Початковий масив прізвищ:</strong>
+      <div class="names-row">
+        <span class="name-tag" *ngFor="let s of arrayOne.surnames">{{ s }}</span>
+      </div>
+    </div>
+
+    <!-- Форма введення з валідацією -->
+    <div class="form-row">
+      <label for="charInput">Введіть одну літеру:</label>
+      <input type="text" maxlength="1" id="charInput" #charInput placeholder="наприклад, Б" />
+      <button class="btn" (click)="filterNames(charInput.value)">Знайти прізвища</button>
+    </div>
+
+    <div class="error-msg" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Результати -->
+    <div class="results-box" *ngIf="isSearched && !errorMessage">
+      <h3>Результати вибірки для літери «{{ searchLetter }}»:</h3>
+      <div *ngIf="arrayOne.filteredSurnames.length > 0; else noResults" class="names-row">
+        <span class="name-tag found" *ngFor="let s of arrayOne.filteredSurnames">{{ s }}</span>
+      </div>
+      <ng-template #noResults>
+        <p class="not-found">Прізвищ, що починаються на «{{ searchLetter }}», не знайдено.</p>
+      </ng-template>
+    </div>
+  </section>
+</main>

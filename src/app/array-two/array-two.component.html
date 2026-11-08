@@ -1,0 +1,72 @@
+<main class="container">
+  <section class="card">
+    <div class="task-badge">Варіант 4</div>
+    <h2 class="card-title">Двовимірний масив</h2>
+    <p class="task-desc">
+      Створіть двовимірний цілочисельний масив А [1..10, 1..7] і знайдіть суму всіх його елементів, що мають обидва непарних індекса.
+    </p>
+
+    <!-- Форма введення розмірності -->
+    <div class="form-row">
+      <div class="input-item">
+        <label for="rows">Кількість рядків:</label>
+        <input 
+          type="number" 
+          id="rows" 
+          #rowsInput 
+          [value]="rowsCount" 
+          min="1" 
+          max="10" 
+          placeholder="1-10" 
+        />
+      </div>
+
+      <div class="input-item">
+        <label for="cols">Кількість стовпців:</label>
+        <input 
+          type="number" 
+          id="cols" 
+          #colsInput 
+          [value]="colsCount" 
+          min="1" 
+          max="7" 
+          placeholder="1-7" 
+        />
+      </div>
+
+      <button class="btn" (click)="generateAndCalculate(rowsInput.value, colsInput.value)">
+        Згенерувати та порахувати
+      </button>
+    </div>
+
+    <!-- Повідомлення про помилку валідації -->
+    <div class="error-msg" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <!-- Виведення матриці значень-->
+    <div class="table-box" *ngIf="isCalculated && !errorMessage">
+      <h3>Згенерована матриця:</h3>
+      <div class="table-scroll">
+        <table class="matrix-table">
+          <tbody>
+            <tr *ngFor="let row of arrayTwo.a; let i = index">
+              <td
+                *ngFor="let cell of row; let j = index"
+                [class.odd-cell]="isOddIndex(i, j)"
+              >
+                {{ cell }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Підсумкова сума -->
+    <div class="results-box" *ngIf="isCalculated && !errorMessage">
+      <h3>Сума елементів з обома непарними індексами:</h3>
+      <p class="sum-value">{{ arrayTwo.oddIndexSum }}</p>
+    </div>
+  </section>
+</main>

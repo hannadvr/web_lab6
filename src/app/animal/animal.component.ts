@@ -20,7 +20,7 @@ export class AnimalComponent {
     this.animal_show = '';
     this.cat_show = '';
 
-    // 1. Валідація на заповнення текстових полів
+    // Валідація на заповнення текстових полів
     if (!name1.trim() || !name2.trim() || !breed.trim()) {
       this.errorMessage = 'Помилка валідації: усі текстові поля (клички та порода) мають бути заповнені!';
       return;
@@ -29,7 +29,7 @@ export class AnimalComponent {
     const height1 = parseFloat(h1);
     const height2 = parseFloat(h2);
 
-    // 2. Валідація числових полів на коректність та діапазон
+    // Валідація числових полів на коректність та діапазон
     if (isNaN(height1) || isNaN(height2)) {
       this.errorMessage = 'Помилка валідації: ріст тварини має бути числовим значенням!';
       return;
